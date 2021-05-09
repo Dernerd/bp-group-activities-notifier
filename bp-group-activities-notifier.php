@@ -8,6 +8,12 @@
  * Description: Benachrichtigt alle Gruppenmitglieder über jede Aktion in der Gruppe. Ich habe mit Gruppenbeitritt, Gruppenbeitragsaktualisierung, Forumsbeitrag/Antwort getestet. Sollte auch mit anderen zusammenarbeiten
  */
 
+require 'plugin-update-checker/plugin-update-checker.php';
+$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://n3rds.work/wp-update-server/?action=get_metadata&slug=bp-group-activities-notifier', 
+	__FILE__, 
+	'bp-group-activities-notifier' 
+);
 // Do not allow direct access over web.
 defined( 'ABSPATH' ) || exit;
 
